@@ -1,0 +1,284 @@
+.resume-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.resume-modal-window {
+  background: #f8fafc;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.35);
+  width: 100%;
+  max-width: 860px;
+  max-height: 94vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.resume-ctrl-bar {
+  padding: 1rem 1.75rem;
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ctrl-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+
+.ctrl-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-sm {
+  padding: 0.45rem 0.95rem;
+  font-size: 0.825rem;
+}
+
+.modal-close-icon-btn {
+  color: var(--navy-500);
+  padding: 0.35rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.modal-close-icon-btn:hover {
+  background: var(--sky-50);
+  color: var(--navy-900);
+}
+
+/* Printable Sheet */
+.resume-paper {
+  background: #ffffff;
+  padding: 3rem;
+  overflow-y: auto;
+  color: #1e293b;
+  font-family: var(--font-main);
+  line-height: 1.5;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  margin: 1rem auto;
+  width: 95%;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+}
+
+.resume-paper-header {
+  border-bottom: 2px solid #0f172a;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.r-name {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.r-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0284c7;
+  margin-bottom: 0.5rem;
+}
+
+.r-contact-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.r-contact-line a {
+  color: #0284c7;
+  text-decoration: underline;
+}
+
+.r-section {
+  margin-bottom: 1.35rem;
+}
+
+.r-section-heading {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0f172a;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid #cbd5e1;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.65rem;
+}
+
+.r-section-text {
+  font-size: 0.875rem;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.r-entry {
+  margin-bottom: 0.85rem;
+}
+
+.r-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.25rem;
+}
+
+.r-entry-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.r-entry-sub {
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.r-entry-tech {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0284c7;
+  font-family: var(--font-mono);
+}
+
+.r-entry-aside {
+  text-align: right;
+}
+
+.r-date {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.r-cgpa-pill {
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: #0369a1;
+  background: #e0f2fe;
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--radius-sm);
+  margin-top: 0.2rem;
+  display: inline-block;
+}
+
+.r-coursework-line {
+  font-size: 0.825rem;
+  color: #334155;
+  margin-top: 0.3rem;
+}
+
+.r-skills-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+}
+
+.r-skill-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.r-skill-cat {
+  font-weight: 700;
+  color: #0f172a;
+  min-width: 175px;
+}
+
+.r-skill-list {
+  color: #334155;
+}
+
+.r-bullet-list {
+  list-style: disc;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  color: #334155;
+}
+
+/* Print Media Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  #printable-resume, #printable-resume * {
+    visibility: visible;
+  }
+
+  .resume-modal-backdrop {
+    position: static;
+    background: transparent;
+    padding: 0;
+  }
+
+  .resume-modal-window {
+    box-shadow: none;
+    border: none;
+    max-width: 100%;
+    max-height: none;
+  }
+
+  #printable-resume {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20mm;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .resume-paper {
+    padding: 1.5rem;
+  }
+
+  .r-contact-line {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .r-skill-row {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .r-skill-cat {
+    min-width: unset;
+  }
+}

@@ -1,0 +1,211 @@
+.resume-section {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+.resume-container-card {
+  max-width: 1050px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  padding: 3.5rem;
+  align-items: center;
+}
+
+/* Left Pane */
+.resume-summary-pane {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-doc-tag {
+  font-size: 0.775rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--sky-700);
+  background: var(--sky-50);
+  border: 1px solid var(--sky-200);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+
+.resume-candidate-name {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--navy-900);
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+
+.resume-role-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--sky-700);
+  margin-bottom: 1.25rem;
+}
+
+.resume-brief {
+  font-size: 0.95rem;
+  color: var(--navy-600);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.resume-key-points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.rk-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.875rem;
+  color: var(--navy-700);
+}
+
+.rk-icon {
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+.resume-placeholder-note {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  background: var(--sky-50);
+  border: 1px dashed var(--sky-300);
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  color: var(--sky-800);
+  margin-bottom: 1.75rem;
+}
+
+.resume-cta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Right Sheet Graphic */
+.resume-sheet-preview {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.1);
+  position: relative;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  font-size: 0.75rem;
+  color: var(--navy-700);
+  user-select: none;
+}
+
+.resume-sheet-preview:hover {
+  transform: translateY(-4px) rotate(0.5deg);
+  box-shadow: 0 20px 40px -10px rgba(2, 132, 199, 0.2);
+  border-color: var(--sky-300);
+}
+
+.sheet-watermark {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: rgba(2, 132, 199, 0.05);
+  pointer-events: none;
+  letter-spacing: 0.1em;
+}
+
+.sheet-header {
+  border-bottom: 1.5px solid var(--navy-900);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.sheet-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--navy-900);
+}
+
+.sheet-sub {
+  font-size: 0.7rem;
+  color: var(--navy-500);
+}
+
+.sheet-section {
+  margin-bottom: 0.85rem;
+}
+
+.sheet-section-title {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--sky-700);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.05em;
+}
+
+.sheet-edu-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.725rem;
+  color: var(--navy-900);
+}
+
+.sheet-degree-sub {
+  font-size: 0.7rem;
+  color: var(--navy-600);
+}
+
+.sheet-skills-snippet {
+  font-size: 0.7rem;
+  color: var(--navy-600);
+  line-height: 1.4;
+}
+
+.sheet-proj-list {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.7rem;
+}
+
+.sheet-click-hint {
+  margin-top: 1.25rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--sky-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: var(--sky-600);
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .resume-container-card {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,247 @@
+.education-section {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+.education-card-wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.education-main-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.education-main-card:hover {
+  border-color: var(--sky-300);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Top Row */
+.edu-top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.edu-institution-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.edu-icon-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--sky-600) 0%, var(--sky-500) 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.25);
+  flex-shrink: 0;
+}
+
+.edu-degree {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--navy-900);
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+
+.edu-specialization {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--sky-700);
+  margin-bottom: 0.35rem;
+}
+
+.edu-institution {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--navy-600);
+}
+
+/* CGPA Badge */
+.edu-cgpa-badge-card {
+  background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
+  border: 1.5px solid var(--sky-200);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.5rem;
+  text-align: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.08);
+  min-width: 170px;
+}
+
+.cgpa-ribbon {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--sky-700);
+  margin-bottom: 0.35rem;
+}
+
+.cgpa-number-wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.cgpa-value {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--navy-900);
+  line-height: 1;
+}
+
+.cgpa-scale {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy-400);
+}
+
+.cgpa-sub {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--navy-500);
+  margin-top: 0.25rem;
+}
+
+/* Meta Strip */
+.edu-meta-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 2rem;
+}
+
+.edu-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+.status-pill {
+  background: #ecfdf5;
+  color: #065f46;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.775rem;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  background: #10b981;
+  border-radius: 50%;
+}
+
+/* Details Grid */
+.edu-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.detail-col-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.col-icon {
+  color: var(--sky-600);
+}
+
+.col-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy-900);
+}
+
+.coursework-chips-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.course-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.85rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  color: var(--navy-800);
+  font-weight: 500;
+}
+
+.chip-bullet {
+  color: var(--sky-600);
+  font-size: 0.9rem;
+}
+
+.edu-highlights-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.edu-hl-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.875rem;
+  color: var(--navy-600);
+  line-height: 1.5;
+}
+
+.hl-check-icon {
+  color: var(--sky-600);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .education-main-card {
+    padding: 1.75rem;
+  }
+
+  .edu-top-row {
+    flex-direction: column;
+  }
+
+  .edu-cgpa-badge-card {
+    width: 100%;
+  }
+
+  .edu-details-grid {
+    grid-template-columns: 1fr;
+  }
+}
